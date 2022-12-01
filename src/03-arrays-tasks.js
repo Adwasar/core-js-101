@@ -474,6 +474,7 @@ function sortCitiesArray(arr) {
  */
 function getIdentityMatrix(/* n */) {
   throw new Error('Not implemented');
+  //! pass =============================
 }
 
 /**
@@ -489,8 +490,9 @@ function getIdentityMatrix(/* n */) {
  *     0, 100 => [ 0, 1, 2, ..., 100 ]
  *     3, 3   => [ 3 ]
  */
-function getIntervalArray(/* start, end */) {
-  throw new Error('Not implemented');
+function getIntervalArray(start, end) {
+  const length = end - start;
+  return new Array(length + 1).fill(start).map((elem, i) => elem + i);
 }
 
 /**
