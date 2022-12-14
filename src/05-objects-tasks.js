@@ -42,6 +42,7 @@ function Rectangle(width, height) {
  */
 function getJSON(/* obj */) {
   throw new Error('Not implemented');
+  //* test
 }
 
 
