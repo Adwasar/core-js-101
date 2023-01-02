@@ -477,7 +477,8 @@ function sortCitiesArray(arr) {
  *           [0,0,0,0,1]]
  */
 function getIdentityMatrix(n) {
-  return [...Array(n)].map((elem1, x, arr) => arr.map((elem2, y) => (x === y ? 1 : 0)));
+  return [...Array(n)]
+    .map((elem1, x, arr) => arr.map((elem2, y) => (x === y ? 1 : 0)));
 }
 
 /**
@@ -561,8 +562,8 @@ function group(/* array, keySelector, valueSelector */) {
  *   [[1, 2], [3, 4], [5, 6]], (x) => x     =>   [ 1, 2, 3, 4, 5, 6 ]
  *   ['one','two','three'], (x) => x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
  */
-function selectMany(/* arr, childrenSelector */) {
-  throw new Error('Not implemented');
+function selectMany(arr, childrenSelector) {
+  return arr.reduce((acc, elem) => acc.concat(childrenSelector(elem)), []);
 }
 
 
